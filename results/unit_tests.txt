@@ -1,0 +1,13 @@
+test_cents_conservation (test_pipeline.BoundaryTests.test_cents_conservation) ... ok
+test_identical_points (test_pipeline.BoundaryTests.test_identical_points) ... ok
+test_invalid_budget (test_pipeline.BoundaryTests.test_invalid_budget) ... ok
+test_invalid_coordinates (test_pipeline.BoundaryTests.test_invalid_coordinates) ... ok
+test_known_distance (test_pipeline.BoundaryTests.test_known_distance) ... ok
+test_outside_radius (test_pipeline.BoundaryTests.test_outside_radius) ... ok
+test_overlap_deduplication (test_pipeline.BoundaryTests.test_overlap_deduplication) ... ok
+test_zero_weight (test_pipeline.BoundaryTests.test_zero_weight) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.000s
+
+OK

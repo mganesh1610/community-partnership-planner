@@ -1,0 +1,65 @@
+{
+  "executed_at_utc": "2026-11-06T22:21:35.395470+00:00",
+  "source_school_rows": 2613,
+  "excluded_out_of_state_geocodes": 1,
+  "schools": 2612,
+  "sports_complexes": 7,
+  "counties": 15,
+  "arizona_hospitals": 108,
+  "unique_schools_10km": 613,
+  "naive_school_venue_pairs_10km": 1213,
+  "overlap_pairs_removed": 600,
+  "checks_passed": 10,
+  "checks": {
+    "unique_school_keys": true,
+    "unique_venue_keys": true,
+    "valid_coordinates": true,
+    "budget_conserves_cents": true,
+    "one_school_one_venue": true,
+    "sql_source_parity": true,
+    "sql_catchment_parity": true,
+    "sqlite_integrity": true,
+    "hospital_county_coverage": true,
+    "all_15_counties": true
+  },
+  "sensitivity": [
+    {
+      "radius_km": 5,
+      "unique_schools": 295
+    },
+    {
+      "radius_km": 10,
+      "unique_schools": 613
+    },
+    {
+      "radius_km": 15,
+      "unique_schools": 841
+    }
+  ],
+  "provenance": [
+    {
+      "name": "schools_0",
+      "url": "https://nces.ed.gov/opengis/rest/services/K12_School_Locations/EDGE_GEOCODE_PUBLICSCH_2324/MapServer/0/query?where=STATE%3D%27AZ%27&outFields=NCESSCH%2CSTFIP%2CCNTY%2CNMCNTY%2CLAT%2CLON%2CSCHOOLYEAR&returnGeometry=false&orderByFields=NCESSCH&resultOffset=0&resultRecordCount=2000&f=json",
+      "sha256": "321fc0df8698e247e28cd88654e53f19398abe1871317edfcef0cf09098ac938",
+      "bytes": 329808
+    },
+    {
+      "name": "schools_2000",
+      "url": "https://nces.ed.gov/opengis/rest/services/K12_School_Locations/EDGE_GEOCODE_PUBLICSCH_2324/MapServer/0/query?where=STATE%3D%27AZ%27&outFields=NCESSCH%2CSTFIP%2CCNTY%2CNMCNTY%2CLAT%2CLON%2CSCHOOLYEAR&returnGeometry=false&orderByFields=NCESSCH&resultOffset=2000&resultRecordCount=2000&f=json",
+      "sha256": "1d9b0514edd8d4fd6dfa01b7deea87e54ca9f9f34c724e97c7b66ed5e0b38fc9",
+      "bytes": 101229
+    },
+    {
+      "name": "sports",
+      "url": "https://maps.phoenix.gov/pub/rest/services/Public/ParksOpenData/MapServer/7/query?where=1%3D1&outFields=OBJECTID%2CCOMPLEX_NAME&returnGeometry=true&outSR=4326&f=json",
+      "sha256": "29aa64d1a631a650dda09c170a3b398317529261e4702686f46300b6c29ef302",
+      "bytes": 1317
+    },
+    {
+      "name": "hospitals",
+      "url": "https://data.cms.gov/provider-data/api/1/datastore/query/xubh-q36u/0?limit=500&offset=0&conditions%5B0%5D%5Bproperty%5D=state&conditions%5B0%5D%5Bvalue%5D=AZ&conditions%5B0%5D%5Boperator%5D=%3D",
+      "sha256": "429c6667283ce9f931b599c05a822d6a5765a91f1490438d5bec852a850ef73a",
+      "bytes": 153333
+    }
+  ]
+}
